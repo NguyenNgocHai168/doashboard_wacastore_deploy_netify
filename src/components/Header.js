@@ -87,7 +87,7 @@ const Header = () => {
               />
             </Link>
             <div className="dropdown-menu dropdown-menu-end">
-              <Link className="dropdown-item" to="/">
+              <Link className="dropdown-item" to="/home">
                 Thông Tin Của Tôi
               </Link>
               <Link className="dropdown-item" to="#">

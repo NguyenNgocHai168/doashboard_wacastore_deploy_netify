@@ -6,7 +6,7 @@ const Sidebar = () => {
     <div>
       <aside className="navbar-aside" id="offcanvas_aside">
         <div className="aside-top">
-          <Link to="/" className="brand-wrap">
+          <Link to="/home" className="brand-wrap">
             <img
               src="/images/LOGO_Admin.png"
               style={{ height: "46" }}
@@ -27,7 +27,7 @@ const Sidebar = () => {
               <NavLink
                 activeClassName="active"
                 className="menu-link"
-                to="/"
+                to="/home"
                 exact={true}
               >
                 <i className="icon fas fa-home"></i>
