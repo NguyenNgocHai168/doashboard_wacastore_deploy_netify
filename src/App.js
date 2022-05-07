@@ -38,7 +38,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <PrivateRouter path="/" component={HomeScreen} exact />
+          <PrivateRouter path="/home" component={HomeScreen} exact />
           <PrivateRouter path="/products" component={ProductScreen} />
           <PrivateRouter path="/categorys" component={CategoriesScreen} />
           <PrivateRouter path="/orders" component={OrderScreen} />
