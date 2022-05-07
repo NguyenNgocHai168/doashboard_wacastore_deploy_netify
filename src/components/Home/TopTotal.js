@@ -4,11 +4,10 @@ const TopTotal = (props) => {
   const { orders, products } = props;
   let totalSale = 0;
   if (orders) {
-    orders.map((order) => {
-      order.isPaid === true ? (totalSale = totalSale + order.totalPrice) : null;
-    });
+    orders.map((order) => 
+      order.isPaid === true ? (totalSale = totalSale + order.totalPrice) : null
+    );
   }
-
   return (
     <div className="row">
       <div className="col-lg-4">
