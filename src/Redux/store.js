@@ -22,8 +22,12 @@ import {
   catePrdListReducers,
   cateprdUpdateReducers,
 } from "./Reducers/CatePrdReducers";
+import { contactDeleteReducers, contactListReducers } from "./Reducers/ContactReducers";
 
 const reducer = combineReducers({
+  contactList:contactListReducers,
+  contactDelete:contactDeleteReducers,
+
   userLogin: userLoginReducers,
   userCreate: userCreateReducers,
   userList: userListReducers,
