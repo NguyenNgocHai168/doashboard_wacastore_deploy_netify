@@ -109,6 +109,39 @@ export const listUser = () => async (dispatch, getState) => {
   }
 };
 
+// delete users
+export const deleteUsers = (id) => async (dispatch, getState) => {
+  try {
+    dispatch({ type: USER_DELETE_REQUEST });
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+    await axios.delete(`${URL}/api/users/${id}`, config);
+    dispatch({ type: USER_DELETE_SUCCESS });
+    // setTimeout(function () {
+    //   window.location.reload(1);
+    // }, 1500);
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    if (message === "Not authorized, token fails") {
+      dispatch(logout());
+    }
+    dispatch({
+      type: USER_DELETE_FAIL,
+      payload: message,
+    });
+  }
+};
+
 // Create user in admin
 export const createUserProducts =
   (name, email, password, isAdmin) => async (dispatch, getState) => {
@@ -206,36 +239,3 @@ export const updateUsers = (UserUpdate) => async (dispatch, getState) => {
   }
 };
 
-// delete users
-export const deleteUsers = (id) => async (dispatch, getState) => {
-  try {
-    dispatch({ type: USER_DELETE_REQUEST });
-    const {
-      userLogin: { userInfo },
-    } = getState();
-
-    const config = {
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
-    await axios.delete(`${URL}/api/users/${id}`, config);
-    dispatch({ type: USER_DELETE_SUCCESS });
-    setTimeout(function () {
-      window.location.reload(1);
-    }, 1500);
-    
-  } catch (error) {
-    const message =
-      error.response && error.response.data.message
-        ? error.response.data.message
-        : error.message;
-    if (message === "Not authorized, token fails") {
-      dispatch(logout());
-    }
-    dispatch({
-      type: USER_DELETE_FAIL,
-      payload: message,
-    });
-  }
-};

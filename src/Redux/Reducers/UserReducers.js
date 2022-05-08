@@ -54,6 +54,20 @@ export const userListReducers = (state = { users: [] }, action) => {
   }
 };
 
+// DELETE USER IN ADMIN
+export const userDeleteReducers = (state = { }, action) => {
+  switch (action.type) {
+    case USER_DELETE_REQUEST:
+      return { loading: true };
+    case USER_DELETE_SUCCESS:
+      return { loading: false, success: true };
+    case USER_DELETE_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
 // CREATE USER IN ADMIN
 export const userCreateReducers = (state = {}, action) => {
   switch (action.type) {
@@ -102,16 +116,4 @@ export const userUpdateReducers = (state = { userUpdate: {} }, action) => {
       return state;
   }
 };
-// DELETE USER IN ADMIN
-export const userDeleteReducers = (state = { }, action) => {
-  switch (action.type) {
-    case USER_DELETE_REQUEST:
-      return { loading: true };
-    case USER_DELETE_SUCCESS:
-      return { loading: false, success: true };
-    case USER_DELETE_FAIL:
-      return { loading: false, error: action.payload };
-    default:
-      return state;
-  }
-};
+
