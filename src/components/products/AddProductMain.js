@@ -62,10 +62,6 @@ const AddProductMain = () => {
             </Link>
             <h2
               className="content-title"
-              style={{
-                fontFamily: "'Brush Script MT', cursive",
-                fontWeight: "600",
-              }}
             >
               Thêm Sản Phẩm
             </h2>

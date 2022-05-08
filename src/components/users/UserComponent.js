@@ -43,10 +43,6 @@ const UserComponent = () => {
       <div className="content-header">
         <h2
           className="content-title"
-          style={{
-            fontFamily: "'Brush Script MT', cursive",
-            fontWeight: "600",
-          }}
         >
           Admin & Khách Hàng
         </h2>
@@ -107,7 +103,7 @@ const UserComponent = () => {
                       />
                     </div>
                     <div className="card-body">
-                      <h5 className="card-title mt-5">{user.name}</h5>
+                      <h5 className="card-titlee mt-5">{user.name}</h5>
                       <div className="card-text text-muted">
                         {user.isAdmin === true ? (
                           <p

@@ -103,10 +103,6 @@ const OrderDetailmain = (props) => {
                       <button
                         onClick={deliveredHandler}
                         className="btn btn-outline-warning col-12"
-                        style={{
-                          fontFamily: "'Brush Script MT', cursive",
-                          fontWeight: "600",
-                        }}
                       >
                         <b>Click Đánh Dấu Đã Giao Hàng ✔️</b>
                       </button>

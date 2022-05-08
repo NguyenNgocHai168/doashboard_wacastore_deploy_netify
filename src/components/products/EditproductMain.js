@@ -87,10 +87,6 @@ const EditProductMain = (props) => {
             </Link>
             <h2
               className="content-title"
-              style={{
-                fontFamily: "'Brush Script MT', cursive",
-                fontWeight: "600",
-              }}
             >
               Cập Nhật Sản Phẩm
             </h2>

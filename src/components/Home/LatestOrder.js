@@ -11,10 +11,6 @@ const LatestOrder = (props) => {
     <div className="card-body">
       <h5
         className="card-title"
-        style={{
-          fontFamily: "'Brush Script MT', cursive",
-          fontWeight: "600",
-        }}
       >
         Đơn Hàng Mới
       </h5>

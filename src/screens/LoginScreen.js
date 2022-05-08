@@ -41,7 +41,6 @@ const Login = ({ history }) => {
           {loading && <Loading />}
           <h4
             className="card-title mb-4 text-center"
-            style={{fontWeight:"bold", fontFamily: "'Brush Script MT', cursive" }}
           >
             Đăng Nhập
           </h4>

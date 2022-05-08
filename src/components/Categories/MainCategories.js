@@ -22,10 +22,6 @@ const MainCategories = () => {
       <div className="content-header">
         <h2
           className="content-title"
-          style={{
-            fontFamily: "'Brush Script MT', cursive",
-            fontWeight: "600",
-          }}
         >
           Danh Mục Sản Phẩm
         </h2>
