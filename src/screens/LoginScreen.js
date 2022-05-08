@@ -27,6 +27,9 @@ const Login = ({history}) => {
   return (
     <>
     <Toast/>
+      <a target="_blank" href="https://waca-fontend.herokuapp.com/">
+          <button className="btn btn-outline-dark mt-5 mx-2"><b>Quay Lại Shop 👈</b></button>
+      </a>
       <div
         className="card shadow mx-auto"
         style={{ maxWidth: "380px", marginTop: "100px" }}
@@ -34,7 +37,7 @@ const Login = ({history}) => {
         <div className="card-body">
           {error && <Message variant="alert-danger">{error}</Message>}
           {loading && <Loading />}
-          <h4 className="card-title mb-4 text-center">Sign in</h4>
+          <h4 className="card-title mb-4 text-center">ĐĂNG NHẬP</h4>
           <form onSubmit={submitHandler}>
             <div className="mb-3">
               <input
@@ -57,7 +60,7 @@ const Login = ({history}) => {
 
             <div className="mb-4">
               <button type="submit" className="btn btn-primary w-100">
-                Login
+                đăng nhập
               </button>
             </div>
           </form>
