@@ -41,7 +41,7 @@ const Login = ({ history }) => {
           {loading && <Loading />}
           <h4
             className="card-title mb-4 text-center"
-            style={{ fontFamily: "'Brush Script MT', Fantasy" }}
+            style={{fontWeight:"bold", fontFamily: "'Brush Script MT', cursive" }}
           >
             <b>ĐĂNG NHẬP</b>
           </h4>
