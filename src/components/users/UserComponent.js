@@ -10,30 +10,32 @@ const UserComponent = () => {
   const dispatch = useDispatch();
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
+  const userDelete = useSelector((state) => state.userDelete);
+  const { error: deleteError, success: deleteSuccess } = userDelete;
 
   useEffect(() => {
     dispatch(listUser());
-  }, [dispatch]);
+  }, [dispatch, deleteSuccess]);
 
-  function deleteHandler(id){
+  function deleteHandler(id) {
     Swal.fire({
-      title: 'Bạn Có Chắc Không ?',
+      title: "Bạn Có Chắc Không ?",
       text: "bạn sẽ ko thấy người dùng này nữa!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
-          'Deleted!',
-          'Người dùng đã xóa.',
-          'success',
-          dispatch(deleteUsers(id)),
-        )
+          "Deleted!",
+          "Người dùng đã xóa.",
+          "success",
+          dispatch(deleteUsers(id))
+        );
       }
-    })
+    });
   }
 
   return (
@@ -77,6 +79,9 @@ const UserComponent = () => {
 
         {/* Card */}
         <div className="card-body">
+          {deleteError && (
+            <Message variant="alert-danger">{deleteError}</Message>
+          )}
           {loading ? (
             <Loading />
           ) : error ? (
