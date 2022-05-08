@@ -5,7 +5,7 @@ import Loading from "../components/LoadingError/Loading";
 import Toast from "../components/LoadingError/Toast";
 import { login } from "../Redux/Actions/userActions";
 
-const Login = ({history}) => {
+const Login = ({ history }) => {
   window.scrollTo(0, 0);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +17,7 @@ const Login = ({history}) => {
   useEffect(() => {
     if (userInfo) {
       history.push("/home");
-    }  
+    }
   }, [userInfo, history]);
 
   const submitHandler = (e) => {
@@ -26,9 +26,11 @@ const Login = ({history}) => {
   };
   return (
     <>
-    <Toast/>
+      <Toast />
       <a target="_blank" href="https://waca-fontend.herokuapp.com/">
-          <button className="btn btn-outline-dark mt-5 mx-2"><b>Quay Lại Shop 👈</b></button>
+        <button className="btn btn-outline-dark mt-5 mx-2">
+          <b>Quay Lại Shop 👈</b>
+        </button>
       </a>
       <div
         className="card shadow mx-auto"
@@ -37,7 +39,12 @@ const Login = ({history}) => {
         <div className="card-body">
           {error && <Message variant="alert-danger">{error}</Message>}
           {loading && <Loading />}
-          <h4 className="card-title mb-4 text-center">ĐĂNG NHẬP</h4>
+          <h4
+            className="card-title mb-4 text-center"
+            style={{ fontFamily: "'Brush Script MT', cursive" }}
+          >
+            <b>ĐĂNG NHẬP</b>
+          </h4>
           <form onSubmit={submitHandler}>
             <div className="mb-3">
               <input

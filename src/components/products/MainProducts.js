@@ -23,7 +23,15 @@ const MainProducts = () => {
   return (
     <section className="content-main">
       <div className="content-header">
-        <h2 className="content-title">Sản Phẩm</h2>
+        <h2
+          className="content-title"
+          style={{
+            fontFamily: "'Brush Script MT', cursive",
+            fontWeight: "600",
+          }}
+        >
+          Sản Phẩm
+        </h2>
         <div>
           <Link to="/addproduct" className="btn btn-primary">
             Tạo Mới
@@ -48,8 +56,8 @@ const MainProducts = () => {
                 value={selectCategory}
                 onChange={(e) => setSelectCategory(e.target.value)}
               >
-                <option value={(0)}>Watch</option>
-                <option value={(1)}>Cameras</option>
+                <option value={0}>Watch</option>
+                <option value={1}>Cameras</option>
               </select>
             </div>
             <div className="col-lg-2 col-6 col-md-3">

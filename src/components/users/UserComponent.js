@@ -41,7 +41,15 @@ const UserComponent = () => {
   return (
     <section className="content-main">
       <div className="content-header">
-        <h2 className="content-title">Admin & Khách Hàng</h2>
+        <h2
+          className="content-title"
+          style={{
+            fontFamily: "'Brush Script MT', cursive",
+            fontWeight: "600",
+          }}
+        >
+          Admin & Khách Hàng
+        </h2>
         <div>
           <Link to="/adduser" className="btn btn-primary">
             <i className="material-icons md-plus"></i> Tạo Mới

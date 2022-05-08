@@ -20,7 +20,15 @@ const OrderMain = () => {
   return (
     <section className="content-main">
       <div className="content-header">
-        <h2 className="content-title">Hóa Đơn</h2>
+        <h2
+          className="content-title"
+          style={{
+            fontFamily: "'Brush Script MT', cursive",
+            fontWeight: "600",
+          }}
+        >
+          Hóa Đơn
+        </h2>
       </div>
 
       <div className="card mb-4 shadow-sm">
@@ -60,7 +68,7 @@ const OrderMain = () => {
             ) : error ? (
               <Message variant="alert-danger">{error}</Message>
             ) : (
-              <Orders orders={orders}/>
+              <Orders orders={orders} />
             )}
           </div>
         </div>

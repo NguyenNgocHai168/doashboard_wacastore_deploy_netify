@@ -55,7 +55,15 @@ const AddUserMain = () => {
           <Link to="/users" className="btn btn-primary text-white">
             Quay Lại Trang Admin & User
           </Link>
-          <h2 className="content-title">Thêm Người Dùng Mới</h2>
+          <h2
+            className="content-title"
+            style={{
+              fontFamily: "'Brush Script MT', cursive",
+              fontWeight: "600",
+            }}
+          >
+            Thêm Người Dùng Mới
+          </h2>
         </div>
 
         <div className="card shadow-sm">

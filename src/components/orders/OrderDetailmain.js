@@ -87,7 +87,13 @@ const OrderDetailmain = (props) => {
               <div className="col-lg-3">
                 <div className="box shadow-sm bg-light">
                   {order.isDelivered ? (
-                    <button className="btn btn-primary col-12">
+                    <button
+                      className="btn btn-primary col-12"
+                      style={{
+                        fontFamily: "'Brush Script MT', cursive",
+                        fontWeight: "600",
+                      }}
+                    >
                       ✔️ Đã Giao Hàng{" "}
                       {moment(order.isDeliveredAt).format("MMM Do YY")}
                     </button>
@@ -97,6 +103,10 @@ const OrderDetailmain = (props) => {
                       <button
                         onClick={deliveredHandler}
                         className="btn btn-outline-warning col-12"
+                        style={{
+                          fontFamily: "'Brush Script MT', cursive",
+                          fontWeight: "600",
+                        }}
                       >
                         <b>Click Đánh Dấu Đã Giao Hàng ✔️</b>
                       </button>

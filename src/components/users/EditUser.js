@@ -68,7 +68,15 @@ const EditUser = (props) => {
           <Link to="/users" className="btn btn-primary text-white">
             Quay Lại Trang Admin & User
           </Link>
-          <h2 className="content-title">Cận Nhật Người Dùng</h2>
+          <h2
+            className="content-title"
+            style={{
+              fontFamily: "'Brush Script MT', cursive",
+              fontWeight: "600",
+            }}
+          >
+            Cập Nhật Người Dùng
+          </h2>
         </div>
 
         <div className="card shadow-sm">
@@ -129,7 +137,10 @@ const EditUser = (props) => {
                         />
                       </div>
                       <div className="mb-4">
-                        <label htmlFor="User_chooseAdmin" className="form-label">
+                        <label
+                          htmlFor="User_chooseAdmin"
+                          className="form-label"
+                        >
                           Chọn Làm Admin
                         </label>
                         <select

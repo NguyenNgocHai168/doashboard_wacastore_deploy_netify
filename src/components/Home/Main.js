@@ -14,10 +14,19 @@ const Main = () => {
     <>
       <section className="content-main">
         <div className="content-header">
-          <h2 className="content-title"> Trang Quảng Trị </h2>
+          <h2
+            className="content-title"
+            style={{
+              fontFamily: "'Brush Script MT', cursive",
+              fontWeight: "600",
+            }}
+          >
+            {" "}
+            Trang Quảng Trị{" "}
+          </h2>
         </div>
         {/* Top Total */}
-        <TopTotal orders={orders} products={products}/>
+        <TopTotal orders={orders} products={products} />
 
         <div className="row">
           {/* STATICS */}
@@ -27,7 +36,7 @@ const Main = () => {
 
         {/* LATEST ORDER */}
         <div className="card mb-4 shadow-sm">
-          <LatestOrder orders={orders} loading={loading} error={error}/>
+          <LatestOrder orders={orders} loading={loading} error={error} />
         </div>
       </section>
     </>

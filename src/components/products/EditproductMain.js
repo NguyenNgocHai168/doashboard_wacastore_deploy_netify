@@ -85,7 +85,15 @@ const EditProductMain = (props) => {
             <Link to="/products" className="btn btn-danger text-white">
               Quay Lại Trang Sản Phẩm
             </Link>
-            <h2 className="content-title">Cập Nhật Sản Phẩm</h2>
+            <h2
+              className="content-title"
+              style={{
+                fontFamily: "'Brush Script MT', cursive",
+                fontWeight: "600",
+              }}
+            >
+              Cập Nhật Sản Phẩm
+            </h2>
             <div>
               <button type="submit" className="btn btn-primary">
                 Cập Nhật Ngay
@@ -178,7 +186,7 @@ const EditProductMain = (props) => {
                           onChange={(e) => setCategory(e.target.value)}
                         >
                           {cateProducts?.map((prdCate) => (
-                            <option value={(number++)}>{prdCate.name}</option>
+                            <option value={number++}>{prdCate.name}</option>
                           ))}
                         </select>
                       </div>

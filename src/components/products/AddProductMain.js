@@ -46,7 +46,9 @@ const AddProductMain = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createProducts(name, price, category, description, image, countInStock));
+    dispatch(
+      createProducts(name, price, category, description, image, countInStock)
+    );
   };
   let number = 0;
   return (
@@ -58,7 +60,15 @@ const AddProductMain = () => {
             <Link to="/products" className="btn btn-danger text-white">
               Quay Lại Trang Sản Phẩm
             </Link>
-            <h2 className="content-title">Thêm Sản Phẩm</h2>
+            <h2
+              className="content-title"
+              style={{
+                fontFamily: "'Brush Script MT', cursive",
+                fontWeight: "600",
+              }}
+            >
+              Thêm Sản Phẩm
+            </h2>
             <div>
               <button type="submit" className="btn btn-primary">
                 Thêm Mới Ngay
@@ -145,7 +155,7 @@ const AddProductMain = () => {
                       onChange={(e) => setCategory(e.target.value)}
                     >
                       {cateProducts?.map((prdCate) => (
-                         <option value={(number++)}>{prdCate.name}</option>
+                        <option value={number++}>{prdCate.name}</option>
                       ))}
                     </select>
                   </div>

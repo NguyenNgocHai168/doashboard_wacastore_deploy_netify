@@ -9,7 +9,15 @@ const LatestOrder = (props) => {
 
   return (
     <div className="card-body">
-      <h5 className="card-title">Đơn Hàng Mới</h5>
+      <h5
+        className="card-title"
+        style={{
+          fontFamily: "'Brush Script MT', cursive",
+          fontWeight: "600",
+        }}
+      >
+        Đơn Hàng Mới
+      </h5>
       {loading ? (
         <Loading />
       ) : error ? (
@@ -17,19 +25,19 @@ const LatestOrder = (props) => {
       ) : (
         <div className="table-responsive">
           <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Tên</th>
-              <th scope="col">Email</th>
-              <th scope="col">Tổng Tiền</th>
-              <th scope="col">Thanh Toán</th>
-              <th scope="col">Ngày/Tháng</th>
-              <th>Tình Trạng</th>
-              <th scope="col" className="text-end">
-                Hành Động
-              </th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th scope="col">Tên</th>
+                <th scope="col">Email</th>
+                <th scope="col">Tổng Tiền</th>
+                <th scope="col">Thanh Toán</th>
+                <th scope="col">Ngày/Tháng</th>
+                <th>Tình Trạng</th>
+                <th scope="col" className="text-end">
+                  Hành Động
+                </th>
+              </tr>
+            </thead>
             <tbody>
               {orders.slice(0, 5).map((order) => (
                 <tr key={order._id}>
@@ -37,7 +45,9 @@ const LatestOrder = (props) => {
                     <b>{order.user.name}</b>
                   </td>
                   <td>{order.user.email}</td>
-                  <td>{order.totalPrice} <b>VNĐ</b></td>
+                  <td>
+                    {order.totalPrice} <b>VNĐ</b>
+                  </td>
                   <td>
                     {order.isPaid ? (
                       <span className="badge rounded-pill alert-success">
