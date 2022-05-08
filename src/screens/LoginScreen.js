@@ -43,7 +43,7 @@ const Login = ({ history }) => {
             className="card-title mb-4 text-center"
             style={{fontWeight:"bold", fontFamily: "'Brush Script MT', cursive" }}
           >
-            <b>ĐĂNG NHẬP</b>
+            Đăng Nhập
           </h4>
           <form onSubmit={submitHandler}>
             <div className="mb-3">
