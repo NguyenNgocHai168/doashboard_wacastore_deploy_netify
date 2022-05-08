@@ -51,7 +51,7 @@ const Sidebar = () => {
                 to="/addproduct"
               >
                 <i className="icon fas fa-cart-plus"></i>
-                <span className="text">Thêm Sảm Phẩm</span>
+                <span className="text">Thêm Sản Phẩm</span>
               </NavLink>
             </li>
             <li className="menu-item">

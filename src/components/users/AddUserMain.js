@@ -52,7 +52,7 @@ const AddUserMain = () => {
       <Toast />
       <section className="content-main">
         <div className="content-header">
-          <Link to="/users" className="btn btn-primary text-white">
+          <Link to="/users" className="btn btn-dark text-white">
             Quay Lại Trang Admin & User
           </Link>
           <h2
@@ -127,7 +127,7 @@ const AddUserMain = () => {
                   </div>
                   <div className="d-grid">
                     <button className="btn btn-primary py-3">
-                      Create User
+                      Tạo Mới Người Dùng
                     </button>
                   </div>
                 </form>

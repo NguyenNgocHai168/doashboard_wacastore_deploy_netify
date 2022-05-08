@@ -65,7 +65,7 @@ const EditUser = (props) => {
       <Toast />
       <section className="content-main">
         <div className="content-header">
-          <Link to="/users" className="btn btn-primary text-white">
+          <Link to="/users" className="btn btn-dark text-white">
             Quay Lại Trang Admin & User
           </Link>
           <h2

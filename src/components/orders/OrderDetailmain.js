@@ -89,10 +89,6 @@ const OrderDetailmain = (props) => {
                   {order.isDelivered ? (
                     <button
                       className="btn btn-primary col-12"
-                      style={{
-                        fontFamily: "'Brush Script MT', cursive",
-                        fontWeight: "600",
-                      }}
                     >
                       ✔️ Đã Giao Hàng{" "}
                       {moment(order.isDeliveredAt).format("MMM Do YY")}

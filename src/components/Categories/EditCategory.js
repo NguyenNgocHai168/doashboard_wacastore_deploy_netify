@@ -64,7 +64,7 @@ const EditCategory = (props) => {
       <Toast />
       <section className="content-main">
         <div className="content-header">
-          <Link to="/categorys" className="btn btn-primary text-white">
+          <Link to="/categorys" className="btn btn-dark text-white">
             Quay Lại Trang Danh Mục
           </Link>
           <h2
