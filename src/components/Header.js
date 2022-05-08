@@ -75,7 +75,7 @@ const Header = () => {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="#">
-              Xin chào Admin , <b>{userInfo.name}</b>
+              Xin chào: <b>{userInfo.name}</b>
             </Link>
           </li>
           <li className="dropdown nav-item">
