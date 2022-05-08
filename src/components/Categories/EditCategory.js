@@ -26,7 +26,7 @@ const EditCategory = (props) => {
   const dispatch = useDispatch();
   const cateProductEdit = useSelector((state) => state.cateProductEdit);
   const { loading, error, cateProduct } = cateProductEdit;
-  
+
   const cateProductUpdate = useSelector((state) => state.cateProductUpdate);
   const {
     loading: loadingUpdate,
@@ -67,7 +67,15 @@ const EditCategory = (props) => {
           <Link to="/categorys" className="btn btn-primary text-white">
             Quay Lại Trang Danh Mục
           </Link>
-          <h2 className="content-title">Cập Nhật Danh Mục</h2>
+          <h2
+            className="content-title"
+            style={{
+              fontFamily: "'Brush Script MT', cursive",
+              fontWeight: "600",
+            }}
+          >
+            Cập Nhật Danh Mục
+          </h2>
         </div>
 
         <div className="card shadow-sm">

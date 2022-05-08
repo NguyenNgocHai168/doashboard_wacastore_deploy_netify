@@ -15,12 +15,20 @@ const MainCategories = () => {
 
   useEffect(() => {
     dispatch(listCategoryProducts());
-  }, [dispatch,deleteSuccess]);
+  }, [dispatch, deleteSuccess]);
 
   return (
     <section className="content-main">
       <div className="content-header">
-        <h2 className="content-title">Danh Mục Sản Phẩm</h2>
+        <h2
+          className="content-title"
+          style={{
+            fontFamily: "'Brush Script MT', cursive",
+            fontWeight: "600",
+          }}
+        >
+          Danh Mục Sản Phẩm
+        </h2>
       </div>
 
       <div className="card shadow-sm">
