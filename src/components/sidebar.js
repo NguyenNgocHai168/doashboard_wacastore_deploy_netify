@@ -87,11 +87,11 @@ const Sidebar = () => {
             <li className="menu-item">
               <NavLink
                 activeClassName="active"
-                className="menu-link disabled"
-                to="/sellers"
+                className="menu-link"
+                to="/contact"
               >
-                <i className="icon fas fa-store-alt"></i>
-                <span className="text">Người Bán</span>
+                <i className="icon fas fa-phone"></i>
+                <span className="text">Thông Tin Liên Hệ</span>
               </NavLink>
             </li>
 

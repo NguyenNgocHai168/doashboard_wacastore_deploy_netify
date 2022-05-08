@@ -20,6 +20,7 @@ import { listOrders } from "./Redux/Actions/OrderActions";
 import CategoriesEditScreen from "./screens/CategoriesEditScreen";
 import UsersEditScreen from "./screens/UsersEditScreen";
 import AddUser from "./screens/AddUser";
+import ContactScreen from "./screens/ContactScreen";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ function App() {
           <PrivateRouter path="/addproduct" component={AddProduct} />
           <PrivateRouter path="/adduser" component={AddUser} />
           <PrivateRouter path="/users" component={UsersScreen} />
+          <PrivateRouter path="/contact" component={ContactScreen} />
           <PrivateRouter
             path="/product/:id/edit"
             component={ProductEditScreen}
