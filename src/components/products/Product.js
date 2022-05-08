@@ -13,26 +13,26 @@ const Product = (props) => {
   //   if(window.confirm("you are sure ?? ")) {
   //     dispatch(deleteProducts(id));
   //   }
-  // } 
-  function deleteHandler(id){
+  // }
+  function deleteHandler(id) {
     Swal.fire({
-      title: 'Bạn Có Chắc Không ?',
+      title: "Bạn Có Chắc Không ?",
       text: "bạn sẽ không thấy sản phẩm này nữa!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
-          'Deleted!',
-          'Đã Xóa Sản Phẩm.',
-          'success',
-          dispatch(deleteProducts(id)),
-        )
+          "Deleted!",
+          "Đã Xóa Sản Phẩm.",
+          "success",
+          dispatch(deleteProducts(id))
+        );
       }
-    })
+    });
   }
 
   return (
@@ -50,16 +50,22 @@ const Product = (props) => {
             <div className="row">
               <Link
                 to={`/product/${product._id}/edit`}
-                className="btn btn-sm btn-outline-success p-2 pb-3 col-md-6"
+                className="btn btn-sm btn-outline-warning p-2 pb-3 col-md-3 mx-2"
               >
                 <i className="fas fa-pen"></i>
               </Link>
               <Link
                 to="#"
                 onClick={() => deleteHandler(product._id)}
-                className="btn btn-sm btn-outline-danger p-2 pb-3 col-md-6"
+                className="btn btn-sm btn-outline-danger p-2 pb-3 col-md-3 mx-2"
               >
                 <i className="fas fa-trash-alt"></i>
+              </Link>
+              <Link
+                to="#"
+                className="btn btn-sm btn-outline-primary p-2 pb-3 col-md-3 mx-2"
+              >
+                <i className="fas fa-eye"></i>
               </Link>
             </div>
           </div>

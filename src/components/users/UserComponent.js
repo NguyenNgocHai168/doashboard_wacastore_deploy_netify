@@ -139,7 +139,7 @@ const UserComponent = () => {
                       </Link>
                       <Link
                         to="#"
-                        className="btn btn-sm btn-outline-success p-2 pb-3 col-md-3 mx-2"
+                        className="btn btn-sm btn-outline-primary p-2 pb-3 col-md-3 mx-2"
                       >
                         <i className="fas fa-eye"></i>
                       </Link>
