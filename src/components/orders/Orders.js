@@ -79,14 +79,14 @@ const Orders = (props) => {
             <td className="d-flex justify-content-end align-item-center">
               <Link
                 to={`/order/${order._id}`}
-                className="btn btn-sm btn-outline-success p-2 pb-3 col-md-6 me-2"
+                className="btn btn-outline-primary pt-2 col-md-6 me-2"
               >
                 <i className="fas fa-eye"></i>
               </Link>
               <Link
                 to="#"
                 onClick={() => deleteHandlerOrder(order._id)}
-                className="btn btn-sm btn-outline-danger p-2 pb-3 col-md-6"
+                className="btn btn-outline-danger pt-2 col-md-6"
               >
                 <i className="fas fa-trash-alt"></i>
               </Link>

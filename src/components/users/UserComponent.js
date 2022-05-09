@@ -123,19 +123,19 @@ const UserComponent = () => {
                       <Link
                         to="#"
                         onClick={() => deleteHandler(user._id)}
-                        className="btn btn-sm btn-outline-danger p-2 pb-3 col-md-3 mx-2"
+                        className="btn btn-outline-danger pt-2 col-md-3 mx-2"
                       >
                         <i className="fas fa-trash-alt"></i>
                       </Link>
                       <Link
                         to={`/user/${user._id}/edit`}
-                        className="btn btn-sm btn-outline-warning p-2 pb-3 col-md-3 mx-2"
+                        className="btn btn-outline-warning pt-2 col-md-3 mx-2"
                       >
                         <i className="fas fa-pen"></i>
                       </Link>
                       <Link
                         to="#"
-                        className="btn btn-sm btn-outline-primary p-2 pb-3 col-md-3 mx-2"
+                        className="btn btn-outline-primary pt-2 col-md-3 mx-2"
                       >
                         <i className="fas fa-eye"></i>
                       </Link>

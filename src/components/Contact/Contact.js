@@ -37,7 +37,7 @@ const Contact = (props) => {
           <th scope="col">Họ & Tên</th>
           <th scope="col">Số Điện Thoại</th>
           <th scope="col">Email</th>
-          <th scope="col">Nội Dung</th>
+          <th scope="col">Nội Dung Khách Hàng Hỏi ??</th>
           <th scope="col" className="text-end">
             Hành Động
           </th>
@@ -60,7 +60,7 @@ const Contact = (props) => {
               <Link
                 to="#"
                 onClick={() => deleteHandlerContact(contact._id)}
-                className="btn btn-sm btn-outline-danger p-2 pb-3 col-md-6"
+                className="btn btn-outline-danger col-md-12"
               >
                 <i className="fas fa-trash-alt"></i>
               </Link>

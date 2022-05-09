@@ -55,111 +55,106 @@ const AddProductMain = () => {
     <>
       <Toast />
       <section className="content-main" style={{ maxWidth: "1200px" }}>
-        <form onSubmit={submitHandler}>
           <div className="content-header">
             <Link to="/products" className="btn btn-dark text-white">
               Quay Lại Trang Sản Phẩm
             </Link>
-            <h2
-              className="content-title"
-            >
-              Thêm Sản Phẩm
-            </h2>
-            <div>
-              <button type="submit" className="btn btn-primary">
-                Thêm Mới Ngay
-              </button>
-            </div>
+            <h2 className="content-title">Thêm Sản Phẩm</h2>
           </div>
-
           <div className="row mb-4">
-            <div className="col-xl-8 col-lg-8">
+            <div className="col-xl-12 col-lg-12">
               <div className="card mb-4 shadow-sm">
                 <div className="card-body">
                   {error && <Message variant="alert-danger">{error}</Message>}
                   {loading && <Loading />}
-                  <div className="mb-4">
-                    <label htmlFor="product_title" className="form-label">
-                      Tên Sản Phẩm
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="form-control"
-                      id="product_title"
-                      required
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="product_price" className="form-label">
-                      Giá Bán
-                    </label>
-                    <input
-                      type="number"
-                      placeholder="Type here"
-                      className="form-control"
-                      id="product_price"
-                      required
-                      value={price}
-                      onChange={(e) => setPrice(e.target.value)}
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="product_price" className="form-label">
-                      Số lượng SP trong kho
-                    </label>
-                    <input
-                      type="number"
-                      placeholder="Type here"
-                      className="form-control"
-                      id="product_price"
-                      required
-                      value={countInStock}
-                      onChange={(e) => setCountInStock(e.target.value)}
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label className="form-label">Miêu Tả SP</label>
-                    <textarea
-                      placeholder="Type here"
-                      className="form-control"
-                      rows="7"
-                      required
-                      value={description}
-                      onChange={(e) => setDescription(e.target.value)}
-                    ></textarea>
-                  </div>
-                  <div className="mb-4">
-                    <label className="form-label">Hình Ảnh</label>
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="Enter Image URL"
-                      required
-                      value={image}
-                      onChange={(e) => setImage(e.target.value)}
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label className="form-label">Danh Mục Sản Phẩm</label>
-                    <select
-                      type="number"
-                      className="form-select"
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
-                    >
-                      {cateProducts?.map((prdCate) => (
-                        <option value={number++}>{prdCate.name}</option>
-                      ))}
-                    </select>
-                  </div>
+                  <form onSubmit={submitHandler}>
+                    <div className="mb-4">
+                      <label htmlFor="product_title" className="form-label">
+                        Tên Sản Phẩm
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Type here"
+                        className="form-control"
+                        id="product_title"
+                        required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="product_price" className="form-label">
+                        Giá Bán
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="Type here"
+                        className="form-control"
+                        id="product_price"
+                        required
+                        value={price}
+                        onChange={(e) => setPrice(e.target.value)}
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="product_price" className="form-label">
+                        Số lượng SP trong kho
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="Type here"
+                        className="form-control"
+                        id="product_price"
+                        required
+                        value={countInStock}
+                        onChange={(e) => setCountInStock(e.target.value)}
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <label className="form-label">Miêu Tả SP</label>
+                      <textarea
+                        placeholder="Type here"
+                        className="form-control"
+                        rows="7"
+                        required
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                      ></textarea>
+                    </div>
+                    <div className="mb-4">
+                      <label className="form-label">Hình Ảnh</label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Enter Image URL"
+                        required
+                        value={image}
+                        onChange={(e) => setImage(e.target.value)}
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <label className="form-label">Danh Mục Sản Phẩm</label>
+                      <select
+                        type="number"
+                        className="form-select"
+                        value={category}
+                        onChange={(e) => setCategory(e.target.value)}
+                      >
+                        {cateProducts?.map((prdCate) => (
+                          <option value={(number++)}>{prdCate.name}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="d-grid">
+                      <button type="submit" className="btn btn-primary py-3">
+                        Thêm Mới Sản Phẩm
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-        </form>
       </section>
     </>
   );

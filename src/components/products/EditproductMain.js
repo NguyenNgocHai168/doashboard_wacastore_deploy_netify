@@ -80,27 +80,17 @@ const EditProductMain = (props) => {
     <>
       <Toast />
       <section className="content-main" style={{ maxWidth: "1200px" }}>
-        <form onSubmit={submitHandler}>
-          <div className="content-header">
-            <Link to="/products" className="btn btn-dark text-white">
-              Quay Lại Trang Sản Phẩm
-            </Link>
-            <h2
-              className="content-title"
-            >
-              Cập Nhật Sản Phẩm
-            </h2>
-            <div>
-              <button type="submit" className="btn btn-primary">
-                Cập Nhật Ngay
-              </button>
-            </div>
-          </div>
-
-          <div className="row mb-4">
-            <div className="col-xl-8 col-lg-8">
-              <div className="card mb-4 shadow-sm">
-                <div className="card-body">
+        <div className="content-header">
+          <Link to="/products" className="btn btn-dark text-white">
+            Quay Lại Trang Sản Phẩm
+          </Link>
+          <h2 className="content-title">Cập Nhật Sản Phẩm</h2>
+        </div>
+        <div className="row mb-4">
+          <div className="col-xl-12 col-lg-12">
+            <div className="card mb-4 shadow-sm">
+              <div className="card-body">
+                <form onSubmit={submitHandler}>
                   {errorUpdate && (
                     <Message variant="alert-danger">{errorUpdate}</Message>
                   )}
@@ -186,13 +176,18 @@ const EditProductMain = (props) => {
                           ))}
                         </select>
                       </div>
+                      <div className="d-grid">
+                        <button type="submit" className="btn btn-primary py-3">
+                          Cập Nhật Sản Phẩm
+                        </button>
+                      </div>
                     </>
                   )}
-                </div>
+                </form>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </section>
     </>
   );
