@@ -68,7 +68,7 @@ const Header = () => {
               <i className="fas fa-moon"></i>
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item p-2">
             <Link className="nav-link btn-icon" to="#">
               <i className="fas fa-bell"></i>
             </Link>
@@ -78,7 +78,7 @@ const Header = () => {
               Xin chào: <b>{userInfo.name}</b>
             </Link>
           </li>
-          <li className="dropdown nav-item">
+          <li className="dropdown nav-item p-2">
             <Link className="dropdown-toggle" data-bs-toggle="dropdown" to="#">
               <img
                 className="img-xs rounded-circle"

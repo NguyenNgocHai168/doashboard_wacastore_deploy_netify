@@ -216,11 +216,15 @@ body.offcanvas-active {
   color: #adb5bd;
   display: block;
   text-decoration: none;
-}
-.main-header .nav-link:hover {
   background-color: #e9ecef;
+}
+.main-header .nav-item .nav-link {
   color: #0000ff;
 }
+/* .main-header .nav-link:hover {
+  background-color: #e9ecef;
+  color: #0000ff;
+} */
 .main-header .col-search {
   flex-grow: 0.5;
 }
